@@ -6,3 +6,13 @@
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
 </div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" />
+    <label for="address">Address</label>
+    <input id="address" formControlName="address" />
+  </fieldset>
+  <button class="button" type="submit">Submit</button>
+</form>
